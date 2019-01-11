@@ -1,0 +1,45 @@
+conf_forward:
+  options_ghc:
+    - -XDeriveFoldable
+    - -XDeriveFunctor
+    - -XDeriveGeneric
+    - -XDeriveTraversable
+    - -XDeriveLift
+    - -XDerivingStrategies
+    - -XGeneralizedNewtypeDeriving
+    - -XOverloadedLabels
+    - -XOverloadedStrings
+    - -XExistentialQuantification
+    - -XStandaloneDeriving
+    - -XScopedTypeVariables
+    - -XUnicodeSyntax
+    - -XBinaryLiterals
+    - -XNumDecimals
+    - -XConstraintKinds
+    - -XRankNTypes
+    - -XTypeFamilies
+    - -XTypeInType
+    - -XDataKinds
+    - -XKindSignatures
+    - -XTypeOperators
+    - -XTypeApplications
+    - -XGADTs
+    - -XNamedFieldPuns
+    - -XInstanceSigs
+    - -XMultiParamTypeClasses
+    - -XFunctionalDependencies
+    - -XConstrainedClassMethods
+    - -XInstanceSigs
+    - -XFlexibleInstances
+    - -XFlexibleContexts
+    - -XBangPatterns
+    - -XViewPatterns
+    - -XPatternGuards
+    - -XMultiWayIf
+    - -XEmptyCase
+    - -XLambdaCase
+conf_layout:
+  lconfig_importColumn: 55
+  lconfig_importAsColumn: 55
+  lconfig_indentAmount: 4
+  lconfig_indentWhereSpecial: true
