@@ -63,7 +63,8 @@ view' s = bin
   bottomRow = container Gtk.Box
                         [#orientation := Gtk.OrientationHorizontal]
                         [clearCompleted, addTodo, clearAll]
-  clearCompleted = widget Gtk.Button [#label := "Clear", on #clicked ClearCompleted]
+  clearCompleted =
+    widget Gtk.Button [#label := "Clear", on #clicked ClearCompleted]
   clearAll = widget Gtk.Button [#label := "Remove All", on #clicked ClearAll]
   addTodo =
     BoxChild defaultBoxChildProperties { expand = True, fill = True } $ widget
@@ -89,7 +90,7 @@ update' s e = case e of
   ClearCompleted ->
     Transition s { todos = V.filter (not . completed) (todos s) } (pure Nothing)
   ClearAll -> Transition s { todos = mempty } (pure Nothing)
-  Closed -> Exit
+  Closed   -> Exit
  where
   mapAt :: Int -> (a -> a) -> Vector a -> Vector a
   mapAt i f = V.modify
